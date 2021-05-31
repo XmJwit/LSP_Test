@@ -1,0 +1,74 @@
+
+
+<!DOCTYPE html>
+<html lang="zh-CN">
+
+<head>
+    <title>身高计算器</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1, user-scalable=no">
+    <link rel="icon" type="image/ico" href="https://sfz.886.be/favicon.ico">
+    <link rel="stylesheet" href="//cdn.bootcss.com/bootstrap/3.3.0/css/bootstrap.min.css">
+    <script src="//cdn.bootcss.com/jquery/1.11.1/jquery.min.js"></script>
+</head>
+
+<body>
+    <div class="container">
+        <div class="row">
+            <div class="col-md-12">
+                <h1 class=text-center>身高计算器</h1>
+                <div class="alert alert-info" role="alert">暂时只支持计算身高！</div>
+                <div class="form-group">
+                    <label for="a">身高(厘米)</label>
+                    <input type="email" class="form-control" id="a" placeholder="请输入您的身高">
+                </div>
+                <div class="form-group">
+                    <label for="b">体重</label>
+                    <input type="email" class="form-control" id="b" placeholder="体重" value="85">
+                </div>
+                <div class="form-group">
+                    <label for="c">年龄</label>
+                    <input type="email" class="form-control" id="c" placeholder="年龄" value="85">
+                </div>
+                <div class="form-group">
+                    <label for="d">血型</label>
+                    <select id="e" class="form-control">
+                        <option>O</option>
+                        <option>A</option>
+                        <option>B</option>
+                        <option>AB</option>
+                        <option>Other</option>
+                    </select>
+                </div>
+                <div class="form-group">
+                    <label for="e">性别</label>
+                    <select id="e" class="form-control">
+                        <option>男</option>
+                        <option>女</option>
+                        <option>其他</option>
+                    </select>
+                </div>
+                <button class="btn btn-default">计算</button>
+                <br><br>
+                <div class="alert alert-info" role="alert">
+                    <h1>结果：<span id="result"></span></h1>
+                </div>
+            </div>
+        </div>
+    </div>
+    <script>
+        $(function(){
+            $("button").click(function(){
+                var a = $("#a").val(),
+                b = $("#b").val(),
+                c = $("#c").val(),
+                d = $("#d").val(),
+                e = $("#e").val(),
+                r=0;
+                r = a;
+                $("#result").text(r + " 厘米");
+            });
+        });
+    </script>
+</body>
+
+</html>
